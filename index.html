@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bienvenida</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      #welcome-message {
+        font-size: 24px;
+        color: #333;
+        margin-top: 100px;
+      }
+    </style>
+    <link
+      rel="icon"
+      href="https://static.vecteezy.com/system/resources/previews/026/565/234/non_2x/a-close-up-of-a-black-and-white-cat-drawing-a-round-minimalist-behind-ai-generative-free-png.png"
+      type="image/png"
+    />
+  </head>
+  <body>
+    <div id="welcome-message"></div>
+
+    <script>
+      // JavaScript para generar el mensaje de bienvenida
+      const welcomeMessage = document.getElementById("welcome-message");
+      const currentDate = new Date();
+      const currentHour = currentDate.getHours();
+
+      let greeting;
+
+      if (currentHour < 12) {
+        greeting = "¡Buenos días!";
+      } else if (currentHour < 18) {
+        greeting = "¡Buenas tardes!";
+      } else {
+        greeting = "¡Buenas noches!";
+      }
+
+      welcomeMessage.textContent = greeting;
+    </script>
+  </body>
+</html>
